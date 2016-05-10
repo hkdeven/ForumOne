@@ -1,0 +1,9 @@
+<h1>This is the index placeholder text</h1>
+
+<% @posts.each do |post| %>
+<h2><%= post.title %></h2>
+<p>Published <br>
+  <%= time_ago_in_words(post.created_at) %> ago.</p>
+<%end%>
+
+<p><%= link_to "New Post", new_post_path(@post) %>
